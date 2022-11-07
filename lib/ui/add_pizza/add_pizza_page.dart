@@ -32,6 +32,11 @@ class AddPizzaPage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        onPressed: () {},
+        child: const Icon(Icons.save),
+      ),
     );
   }
 }
