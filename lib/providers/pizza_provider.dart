@@ -3,6 +3,7 @@ import 'package:flutteroni/model/ingredient.dart';
 
 class PizzaProvider extends ChangeNotifier {
   final List<Ingredient> _ingredients = [];
+  String pizzaName = '';
 
   List<Ingredient> get ingredients => [..._ingredients];
 
