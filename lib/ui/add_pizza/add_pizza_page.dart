@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutteroni/providers/pizza_provider.dart';
 import 'package:flutteroni/ui/add_pizza/widgets/ingredients_widget.dart';
 import 'package:flutteroni/ui/add_pizza/widgets/input_name_widget.dart';
 import 'package:flutteroni/ui/add_pizza/widgets/picture_widget.dart';
+import 'package:provider/provider.dart';
 
 class AddPizzaPage extends StatelessWidget {
   const AddPizzaPage({super.key});
@@ -34,7 +36,7 @@ class AddPizzaPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).colorScheme.primary,
-        onPressed: () {},
+        onPressed: () => context.read<PizzaProvider>().createPizza(),
         child: const Icon(Icons.save),
       ),
     );
