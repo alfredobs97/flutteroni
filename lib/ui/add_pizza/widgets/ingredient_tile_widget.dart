@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutteroni/model/ingredient.dart';
+import 'package:flutteroni/providers/pizza_provider.dart';
+import 'package:provider/provider.dart';
 
 class IngredientTileWidget extends StatelessWidget {
   final Ingredient ingredient;
@@ -21,11 +23,19 @@ class IngredientTileWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Checkbox(value: isSelected, onChanged: (bool? isSelected) {}),
+          Checkbox(
+            value: isSelected,
+            onChanged: (bool? isSelected) {
+              isSelected ?? false ? _addIngredient(context) : _removeIngredient(context);
+            },
+          ),
           const SizedBox(width: 8),
           Text(ingredient.name, style: Theme.of(context).textTheme.bodyText2),
         ],
       ),
     );
   }
+
+  void _addIngredient(BuildContext context) => context.read<PizzaProvider>().addIngredient(ingredient);
+void _removeIngredient(BuildContext context) => context.read<PizzaProvider>().removeIngredient(ingredient);
 }
