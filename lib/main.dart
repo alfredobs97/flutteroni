@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutteroni',
-      theme: AppTheme.theme(),
-      home: ChangeNotifierProvider(
-        create: (_) => PizzaProvider(),
-        child: const AddPizzaPage(),
+    return ChangeNotifierProvider(
+      create: (_) => PizzaProvider(),
+      child: MaterialApp(
+        title: 'Flutteroni',
+        theme: AppTheme.theme(),
+        home: const HomePage(),
       ),
     );
   }
