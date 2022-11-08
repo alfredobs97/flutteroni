@@ -8,6 +8,7 @@ class PizzaProvider extends ChangeNotifier {
   final List<Pizza> _pizzas = [];
 
   List<Ingredient> get ingredients => [..._ingredients];
+  List<Pizza> get pizzas => [..._pizzas];
 
   void addIngredient(Ingredient ingredient) {
     _ingredients.add(ingredient);
