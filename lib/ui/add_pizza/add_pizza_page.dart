@@ -36,7 +36,10 @@ class AddPizzaPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).colorScheme.primary,
-        onPressed: () => context.read<PizzaProvider>().createPizza(),
+        onPressed: () {
+          context.read<PizzaProvider>().createPizza();
+          Navigator.of(context).pop();
+        },
         child: const Icon(Icons.save),
       ),
     );
