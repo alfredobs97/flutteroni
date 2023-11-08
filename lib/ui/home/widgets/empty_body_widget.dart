@@ -5,11 +5,11 @@ class EmptyBodyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       height: 100,
       width: 100,
       child: Column(
-        children: const [
+        children: [
           Icon(Icons.mood_bad, size: 46),
           Text('No hay pizzas'),
         ],
