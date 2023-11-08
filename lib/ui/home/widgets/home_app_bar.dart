@@ -9,7 +9,11 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: Theme.of(context).canvasColor,
       elevation: 0,
-      title: Text('Mis pizzas', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),
+      title: Text('Mis pizzas',
+          style: Theme.of(context)
+              .textTheme
+              .headlineSmall
+              ?.copyWith(fontWeight: FontWeight.bold)),
       titleSpacing: 32,
       actions: const [
         Padding(

@@ -9,7 +9,8 @@ class PizzaListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      gridDelegate:
+          const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemCount: pizzas.length,
       itemBuilder: (context, index) => Padding(
         padding: const EdgeInsets.all(16.0),

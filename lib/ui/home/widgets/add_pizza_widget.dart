@@ -14,12 +14,14 @@ class AddPizzaWidget extends StatelessWidget {
         width: 64,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: Theme.of(context).colorScheme.secondary, width: 2)),
+            border: Border.all(
+                color: Theme.of(context).colorScheme.secondary, width: 2)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Icon(Icons.add, color: Theme.of(context).colorScheme.secondary),
-            Icon(Icons.local_pizza, color: Theme.of(context).colorScheme.primary),
+            Icon(Icons.local_pizza,
+                color: Theme.of(context).colorScheme.primary),
           ],
         ),
       ),
