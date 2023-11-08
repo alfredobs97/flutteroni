@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutteroni/providers/pizza_provider.dart';
 import 'package:flutteroni/ui/add_pizza/widgets/ingredients_widget.dart';
 import 'package:flutteroni/ui/add_pizza/widgets/input_name_widget.dart';
@@ -14,7 +12,8 @@ class AddPizzaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Nueva Pizza', style: Theme.of(context).textTheme.headline5),
+        title: Text('Nueva Pizza',
+            style: Theme.of(context).textTheme.headlineSmall),
         centerTitle: true,
         backgroundColor: Theme.of(context).canvasColor,
         elevation: 0,
@@ -28,7 +27,8 @@ class AddPizzaPage extends StatelessWidget {
             const SizedBox(height: 16),
             const InputNameWidget(),
             const SizedBox(height: 16),
-            Text('Ingredientes', style: Theme.of(context).textTheme.headline5),
+            Text('Ingredientes',
+                style: Theme.of(context).textTheme.headlineSmall),
             const SizedBox(height: 16),
             Expanded(child: IngredientsWidget()),
           ],
