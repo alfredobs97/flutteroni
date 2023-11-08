@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutteroni/ui/add_pizza/add_pizza_page.dart';
 
 class AddPizzaWidget extends StatelessWidget {
