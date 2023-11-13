@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutteroni/data/ingredients.dart';
 import 'package:flutteroni/model/ingredient.dart';
 import 'package:flutteroni/providers/pizza_provider.dart';

@@ -7,7 +7,8 @@ class IngredientTileWidget extends StatelessWidget {
   final Ingredient ingredient;
   final bool isSelected;
 
-  const IngredientTileWidget({required this.ingredient, required this.isSelected, super.key});
+  const IngredientTileWidget(
+      {required this.ingredient, required this.isSelected, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,16 +27,20 @@ class IngredientTileWidget extends StatelessWidget {
           Checkbox(
             value: isSelected,
             onChanged: (bool? isSelected) {
-              isSelected ?? false ? _addIngredient(context) : _removeIngredient(context);
+              isSelected ?? false
+                  ? _addIngredient(context)
+                  : _removeIngredient(context);
             },
           ),
           const SizedBox(width: 8),
-          Text(ingredient.name, style: Theme.of(context).textTheme.bodyText2),
+          Text(ingredient.name, style: Theme.of(context).textTheme.bodyMedium),
         ],
       ),
     );
   }
 
-  void _addIngredient(BuildContext context) => context.read<PizzaProvider>().addIngredient(ingredient);
-void _removeIngredient(BuildContext context) => context.read<PizzaProvider>().removeIngredient(ingredient);
+  void _addIngredient(BuildContext context) =>
+      context.read<PizzaProvider>().addIngredient(ingredient);
+  void _removeIngredient(BuildContext context) =>
+      context.read<PizzaProvider>().removeIngredient(ingredient);
 }

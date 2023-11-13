@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class AddPizzaWidget extends StatelessWidget {
   const AddPizzaWidget({super.key});
@@ -9,12 +8,9 @@ class AddPizzaWidget extends StatelessWidget {
     return Container(
       width: 64,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: Theme.of(context).colorScheme.secondary,
-          width: 2
-        )        
-      ),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+              color: Theme.of(context).colorScheme.secondary, width: 2)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

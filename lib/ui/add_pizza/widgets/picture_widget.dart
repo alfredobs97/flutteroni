@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class PictureWidget extends StatelessWidget {
   const PictureWidget({super.key});
@@ -14,9 +12,9 @@ class PictureWidget extends StatelessWidget {
         color: Colors.grey[300],
         borderRadius: BorderRadius.circular(16),
       ),
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           Icon(Icons.local_pizza),
           Text('Foto'),
         ],
