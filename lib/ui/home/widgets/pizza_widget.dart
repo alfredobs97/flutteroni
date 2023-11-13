@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutteroni/model/pizza.dart';
 
 class PizzaWidget extends StatelessWidget {
@@ -24,16 +22,18 @@ class PizzaWidget extends StatelessWidget {
             height: 70,
             width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(16), bottomRight: Radius.circular(16)),
+              borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(16),
+                  bottomRight: Radius.circular(16)),
               color: Theme.of(context).colorScheme.primary,
             ),
             child: Center(
                 child: Text(
               pizza.name,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyText1
-                  ?.copyWith(fontWeight: FontWeight.bold, color: Theme.of(context).canvasColor, fontSize: 16),
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).canvasColor,
+                  fontSize: 16),
             )),
           )
         ],
